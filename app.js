@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Product = require('./Product.model');
 
-var port = 8090;
+var port = 5200;
 var db = 'mongodb://localhost/productapp'
 
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true});
@@ -54,4 +54,5 @@ app.get('/product/:category', function(req, res) {
 
 app.listen(port, function() {
   console.log('app listening on port ' + port);
+
 });
